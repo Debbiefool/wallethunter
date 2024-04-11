@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet Hunter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./product-list.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./image/logo/LOGO.png" alt="">
+            </a>
+        </div>
+        <ul class="nav">
+            <li class="list"><a href="./index.html">Index</a></li>
+            <li class="list">
+                <a href="./products.html">Products</a>
+                <ol class="nav-list">
+                    <li><a class="sonlist" href="./products.html">Figurine</a></li>
+                    <li><a class="sonlist" href="./products.html">一番くじ</a></li>
+                    <li><a class="sonlist" href="./products.html">Gacha</a></li>
+                    <li><a class="sonlist" href="./products.html">Accessories</a></li>
+                    <li><a class="sonlist" href="./products.html">Blind boxes</a></li>
+                </ol>
+            </li>
+            <li class="list"></i><a href="./news.html">News</a></li>
+            <li class="list"></i><a href="./products.html">Accessories</a></li>
+            <li class="list"></i><a href="./about.html">About</a></li>
+        </ul>
+
+        <div class="search">
+            <div class="search-bar">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </div>
+            <button>
+                <img src="./image/icon/search.png" alt="">
+            </button>
+        </div>
+
+        <div class="icon">
+            <a href="./register.html"><i class="fa-regular fa-circle-user"></i></a>
+            <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+            <a href="#"><i class="fa-regular fa-heart"></i></a>
+        </div>
+
+    </header>
+
+    <section class="section1">
+        <div class="right2">
+            <div class="column">
+                <img class="p1" src="./image/secpro/sec1.png" alt="">
+                <img class="p1" src="./image/secpro/sec2.png" alt="">
+                <img class="p1" src="./image/secpro/sec3.png" alt="">
+                <img class="p1" src="./image/secpro/sec4.png" alt="">
+                <img class="p1" src="./image/secpro/sec6.png" alt="">
+            </div>
+            <div class="cycle">
+                <a class="up" href="#" onclick="prevSlide()"></a>
+                <a class="down" href="#" onclick="nextSlide()"></a>
+            </div>
+
+
+            <div class="main">
+                <img class="p2" src="./image/secpro/sec1.png" alt="">
+            </div>
+        </div>
+
+        <div class="left2">
+            <div class="left3">
+                <h2 class="name">Skullpanda 夜之城系列 </h2>
+                <i class="fa-regular fa-heart heart" onclick="toggleFavorite(this)"></i>
+            </div>
+
+            <h3 class="price">NT$ 330</h3>
+
+            <h3 class="text">數量</h3>
+            <div class="quantity-container">
+
+                <button class="quantity-button" onclick="decreaseQuantity()">- </button>
+                <span id="quantity">1</span>
+                <button class="quantity-button" onclick="increaseQuantity()">+</button>
+            </div>
+            <div class="buy">
+                <button class="button1" onclick="addToCart()">加入購物車</button>
+                <button class="button2">直接購買</button>
+            </div>
+            <div class="information">
+                <p class="inf">發行時間：2022年1月22日</p>
+                <p class="inf">材質：ABS/Hardware/PMMA/PVC</p>
+                <p class="inf">尺寸：高約6.4-7.3公分</p>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section class="section2">
+        <div class="first">
+            <img class="p3" src="./image/secpro/p1.png" alt="">
+        </div>
+        <div class="sec">
+            <img class="p3" src="./image/secpro/p3.png" alt="">
+        </div>
+
+        <div class="third">
+            <img class="p3" src="./image/secpro/p2.webp" alt="">
+        </div>
+
+    </section>
+
+    <section class="section3">
+        <h1 class="umlike">You may also like...</h1>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./image/secpro/umlike/um1.png" alt="">
+                    <div class="text">
+                        <h3>POPMART MOLLY 1000%</h3>
+                        <h2>Louis De Guzman</h2>
+                        <p>NT$ 26,800</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./image/secpro/umlike/UM2.png" alt="">
+                    <div class="text">
+                        <h3>POPMART DIMMO</h3>
+                        <h2>We Are All Performers Figure</h2>
+                        <p>NT$ 980</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <img src="./image/secpro/umlike/um1.png" alt="">
+                    <div class="text">
+                        <h3>POPMART MOLLY 1000%</h3>
+                        <h2>Louis De Guzman</h2>
+                        <p>NT$ 26,800</p>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <img src="./image/secpro/umlike/UM2.png" alt="">
+                    <div class="text">
+                        <h3>POPMART DIMMO</h3>
+                        <h2>We Are All Performers Figure</h2>
+                        <p>NT$ 980</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <img src="./image/secpro/umlike/um1.png" alt="">
+                    <div class="text">
+                        <h3>POPMART MOLLY 1000%</h3>
+                        <h2>Louis De Guzman</h2>
+                        <p>NT$ 26,800</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+
+
+    <footer>
+        <div class="foot-content">
+
+            <div class="left">
+                <a href="./index.html"><img src="./image/logo/LOGO.png" alt=""></a>
+            </div>
+
+
+            <div class="right">
+
+                <ul class="social">
+
+                    <h1 class="follow">Follow us On</h1>
+                    <li class="social-icon">
+                        <a href="./about.html"><img src="./image/icon/line.png" alt="./about.html"></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="./about.html"><img src="./image/icon/ig.png" alt="./about.html"></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="./about.html"><img src="./image/icon/fb.png" alt="./about.html"></a>
+                    </li>
+                    <li class="social-icon">
+                        <a href="./about.html"><img src="./image/icon/yt.png" alt="./about.html"></a>
+                    </li>
+
+                </ul>
+
+                <h6 class="copy">
+                    Copyright©本網站為緯育TibaMe前端工程師班學員專題作品，本平台僅供學習、展示之用。
+                    如有問題，請聯繫debbie0401.hrc@gmail.com，會立即下架此網站。
+                </h6>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="script.js"></script>
+    <script src="./jquery-3.7.1.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#search').focus(function () {
+                $(this).attr('placeholder', '');
+            });
+
+            $('#search').blur(function () {
+                $(this).attr('placeholder', '想找什麼玩具呢~');
+            });
+        });
+
+        // 數量按鈕
+        function increaseQuantity() {
+            var quantityElement = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityElement.textContent);
+            var newQuantity = currentQuantity + 1;
+            quantityElement.textContent = newQuantity;
+        }
+
+        function decreaseQuantity() {
+            var quantityElement = document.getElementById("quantity");
+            var currentQuantity = parseInt(quantityElement.textContent);
+            if (currentQuantity > 1) {
+                var newQuantity = currentQuantity - 1;
+                quantityElement.textContent = newQuantity;
+            }
+        }
+
+        // 收藏清單彈跳視窗
+
+        function toggleFavorite(icon) {
+            icon.classList.toggle('fa-solid');
+            if (icon.classList.contains('fa-solid')) {
+                icon.style.color = 'red'; // 將圖標設置為红色
+                alert('已加入收藏清單！');
+            } else {
+                icon.style.color = 'black'; // 將圖標設置為黑色
+            }
+        }
+
+        // 直向圖片輪播
+
+        var currentSlideIndex = 0;
+        var slides = document.querySelectorAll(".column img");
+        var mainImage = document.querySelector(".p2");
+
+        function showImage(index) {
+            mainImage.src = slides[index].src;
+        }
+
+        function prevSlide() {
+            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+            showImage(currentSlideIndex);
+        }
+
+        function nextSlide() {
+            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+            showImage(currentSlideIndex);
+        }
+
+        slides.forEach(function (slide, index) {
+            slide.addEventListener("click", function () {
+                currentSlideIndex = index;
+                showImage(currentSlideIndex);
+            });
+        });
+
+        // 加入購物車
+
+        function addToCart() {
+            alert("商品已加入購物車！");
+        }
+
+        // 底部加購商品區
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+
+    </script>
+
+</body>
+
+</html>
