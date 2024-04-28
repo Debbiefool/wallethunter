@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=0">
+    <title>Wallet Hunter</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css ">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/news.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/header-footer.css">
+
+</head>
+
+<body>
+    <!-- 導覽列 -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="./image/logo/LOGO.png" alt="">
+            </a>
+        </div>
+        <ul class="nav">
+            <li class="list"><a href="./index.html">首 頁 <span>INDEX</span></a></li>
+            <li class="list"><a href="./about.html">關於我們<span>ABOUT</span></a></li>
+            <li class="list">
+                <a href="./products.html">主要商品<span>PRODUCT</span></a>
+                <ol class="nav-list">
+                    <li><img src="./image/icon/btn1_0.png" alt=""><a class="sonlist" href="./products.html">可動人偶 ></a>
+                    </li>
+                    <li><img src="./image/icon/btn2_0.png" alt=""><a class="sonlist" href="./products.html">一番くじ ></a>
+                    </li>
+                    <li><img src="./image/icon/btn3_0.png" alt=""><a class="sonlist" href="./products.html">扭 蛋 ></a>
+                    </li>
+                    <li><img src="./image/icon/btn4_0.png" alt=""><a class="sonlist" href="./products.html">周邊配件 ></a>
+                    </li>
+                    <li><img src="./image/icon/btn5_0.png" alt=""><a class="sonlist" href="./products.html">盲 盒 ></a>
+                    </li>
+                </ol>
+
+            </li>
+            <!-- <li class="list"><a href="./products.html">精選新品<span>NEW LUANCH</span></a></li> -->
+            <li class="list"><a href="./news.html">新聞報報<span>NEWS</span></a></li>
+        </ul>
+
+        <div class="search">
+            <div class="search-bar">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </div>
+            <button>
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </button>
+        </div>
+
+
+        <div class="icon">
+            <a href="./register.html"><i class="people fa-regular fa-circle-user"></i></a>
+            <a href="#"><i class="cart fa-solid fa-cart-shopping"></i></a>
+            <!-- <i class="hambur fa-solid fa-bars" style="border: 1px solid red;"></i> -->
+            <button class="hambur" style="border: 1px solid red;"><i class="fa-solid fa-bars"></i></button>
+
+            <!-- <a href="#"><i class="fa-regular fa-heart"></i></a> -->
+        </div>
+
+    </header>
+
+    <script>
+        // 獲取漢堡圖標和導航菜單
+        const hamberIcon = document.querySelector('.hambur');
+        const navMenu = document.querySelector('.nav');
+
+        // 點擊漢堡圖標時的事件處理程序
+        hamberIcon.addEventListener('click', function () {
+            // 切換導航菜單的顯示狀態
+            navMenu.classList.toggle('show');
+        });
+
+        // 如果點擊.icon的button時，.nav要顯示展開
+        document.querySelector('.icon .hambur').addEventListener('click', function () {
+            navMenu.classList.add('show');
+        });
+    </script>
+</body>
+
+</html>

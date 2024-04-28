@@ -9,70 +9,106 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./product-list.css">
+    <link rel="stylesheet" href="./css/product-list.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="./css/header-footer.css">
+    
 </head>
 
 <body>
     <!-- 導覽列 -->
     <header>
+        <button class="hambur">
+            <i class="fa-solid fa-bars" id="shopping-cart"></i>
+        </button>
         <div class="logo">
             <a href="index.html">
                 <img src="./image/logo/LOGO.png" alt="">
             </a>
         </div>
         <ul class="nav">
-            <li class="list"><a href="./index.html">Index</a></li>
-            <li class="list">
-                <a href="./products.html">Products</a>
+            <ol class="first">
+                <li><a href="./register.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+            </ol>
+            <ol class="secondary">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </ol>
+            <li class="list"><a href="./index.html">首 頁 <span>INDEX</span></a></li>
+            <li class="list"><a href="./about.html">關於我們<span>ABOUT</span></a></li>
+            <li class="list third">
+                <a href="./products.html">主要商品<span>PRODUCT</span></a>
+
+                <!--for rwd主要商品 -->
+                <div class="arrow">
+                    <span class="mp">主要商品</span><i class="fa-solid fa-chevron-right"></i>
+                </div>
                 <ol class="nav-list">
-                    <li><a class="sonlist" href="./products.html">Figurine</a></li>
-                    <li><a class="sonlist" href="./products.html">一番くじ</a></li>
-                    <li><a class="sonlist" href="./products.html">Gacha</a></li>
-                    <li><a class="sonlist" href="./products.html">Accessories</a></li>
-                    <li><a class="sonlist" href="./products.html">Blind boxes</a></li>
+                    <li class="back">〈 返回</li>
+                    <li><img src="./image/icon/btn1_0.png" alt=""><a class="sonlist"
+                            href="./products.html">可動人偶<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn2_0.png" alt=""><a class="sonlist"
+                            href="./products.html">一番くじ<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn3_0.png" alt=""><a class="sonlist" href="./products.html">扭
+                            蛋<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn4_0.png" alt=""><a class="sonlist"
+                            href="./products.html">周邊配件<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn5_0.png" alt=""><a class="sonlist" href="./products.html">盲
+                            盒<span>></span></a>
+                    </li>
+
                 </ol>
             </li>
-            <li class="list"></i><a href="./news.html">News</a></li>
-            <li class="list"></i><a href="./products.html">Accessories</a></li>
-            <li class="list"></i><a href="./about.html">About</a></li>
+
+            <li class="list"><a href="./news.html">新聞報報<span>NEWS</span></a></li>
+
+
         </ul>
+
 
         <div class="search">
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
             </div>
             <button>
-                <img src="./image/icon/search.png" alt="">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </button>
         </div>
+
 
         <div class="icon">
             <a href="./register.html"><i class="fa-regular fa-circle-user"></i></a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
         </div>
 
     </header>
-
     <section class="section1">
         <div class="right2">
             <div class="column">
+                <button class="left4"><i class="fa-solid fa-angle-left"></i></button>
                 <img class="p1" src="./image/secpro/sec1.png" alt="">
                 <img class="p1" src="./image/secpro/sec2.png" alt="">
                 <img class="p1" src="./image/secpro/sec3.png" alt="">
                 <img class="p1" src="./image/secpro/sec4.png" alt="">
                 <img class="p1" src="./image/secpro/sec6.png" alt="">
+                <button class="right4"><i class="fa-solid fa-angle-right"></i></button>
             </div>
             <div class="cycle">
                 <a class="up" href="#" onclick="prevSlide()"></a>
                 <a class="down" href="#" onclick="nextSlide()"></a>
             </div>
 
-
             <div class="main">
-                <img class="p2" src="./image/secpro/sec1.png" alt="">
+                <img class="p2 panzoom-elements" src="./image/secpro/sec1.png" alt="">
             </div>
         </div>
 
@@ -106,18 +142,54 @@
     </section>
 
     <section class="section2">
-        <div class="first">
-            <img class="p3" src="./image/secpro/p1.png" alt="">
+        <div class="button">
+            <div class="btn" onclick="showContent(0)">
+                <p>商品介紹</p>
+            </div>
+            <div class="btn" onclick="showContent(1)">
+                <p>配送問題</p>
+            </div>
+            <div class="btn" onclick="showContent(2)">
+                <p>運費問題</p>
+            </div>
         </div>
-        <div class="sec">
-            <img class="p3" src="./image/secpro/p3.png" alt="">
+    </section>
+
+    <section class="section4">
+        <div class="content active">
+            <div class="first">
+                <img class="p3" src="./image/secpro/p1.png" alt="">
+            </div>
+            <div class="sec">
+                <img class="p3" src="./image/secpro/p3.png" alt="">
+            </div>
+
+            <div class="third2">
+                <img class="p3" src="./image/secpro/p2.webp" alt="">
+            </div>
+
+            <div class="fourth ">
+                <img class="p3 " src="./image/secpro/p4.webp" alt="">
+            </div>
+
         </div>
 
-        <div class="third">
-            <img class="p3" src="./image/secpro/p2.webp" alt="">
+        <div class="content">
+            <img src="./image/secpro/eg2.png" alt="">
+
+
         </div>
+
+        <div class="content">
+            <img src="./image/secpro/eg3.png" alt="">
+
+        </div>
+
+
 
     </section>
+
+
 
     <section class="section3">
         <h1 class="umlike">You may also like...</h1>
@@ -126,7 +198,8 @@
                 <div class="swiper-slide">
                     <img src="./image/secpro/umlike/um1.png" alt="">
                     <div class="text">
-                        <h3>POPMART MOLLY 1000%</h3>
+                        <h3>泡泡瑪特</h3>
+                        <h3>MOLLY 1000%</h3>
                         <h2>Louis De Guzman</h2>
                         <p>NT$ 26,800</p>
                     </div>
@@ -135,8 +208,10 @@
                 <div class="swiper-slide">
                     <img src="./image/secpro/umlike/UM2.png" alt="">
                     <div class="text">
-                        <h3>POPMART DIMMO</h3>
-                        <h2>We Are All Performers Figure</h2>
+                        <h3>泡泡瑪特</h3>
+                        <h3>DIMMO</h3>
+                        <h2 class="web-text">We Are All Performers Figure</h2>
+                        <h2 class="rwd-text">We Are Performers</h2>
                         <p>NT$ 980</p>
                     </div>
                 </div>
@@ -144,24 +219,28 @@
                 <div class="swiper-slide">
                     <img src="./image/secpro/umlike/um1.png" alt="">
                     <div class="text">
-                        <h3>POPMART MOLLY 1000%</h3>
+                        <h3>泡泡瑪特</h3>
+                        <h3>MOLLY 1000%</h3>
                         <h2>Louis De Guzman</h2>
                         <p>NT$ 26,800</p>
                     </div>
                 </div>
-                
+
                 <div class="swiper-slide">
                     <img src="./image/secpro/umlike/UM2.png" alt="">
                     <div class="text">
-                        <h3>POPMART DIMMO</h3>
-                        <h2>We Are All Performers Figure</h2>
+                        <h3>泡泡瑪特</h3>
+                        <h3>DIMMO</h3>
+                        <h2 class="web-text">We Are All Performers Figure</h2>
+                        <h2 class="rwd-text">We Are Performers</h2>
                         <p>NT$ 980</p>
                     </div>
                 </div>
                 <div class="swiper-slide">
                     <img src="./image/secpro/umlike/um1.png" alt="">
                     <div class="text">
-                        <h3>POPMART MOLLY 1000%</h3>
+                        <h3>泡泡瑪特</h3>
+                        <h3>MOLLY 1000%</h3>
                         <h2>Louis De Guzman</h2>
                         <p>NT$ 26,800</p>
                     </div>
@@ -187,7 +266,7 @@
 
                 <ul class="social">
 
-                    <h1 class="follow">Follow us On</h1>
+                    <h1 class="follow">Folllow us On</h1>
                     <li class="social-icon">
                         <a href="./about.html"><img src="./image/icon/line.png" alt="./about.html"></a>
                     </li>
@@ -209,24 +288,19 @@
                 </h6>
 
             </div>
+            <div class="top-btn">
+                <i class="fa-solid fa-circle-up"></i>
+            </div>
         </div>
     </footer>
 
 
-    <script src="script.js"></script>
-    <script src="./jquery-3.7.1.js"></script>
+    <!-- <script src="script.js"></script> -->
+    <script src="./js/jquery-3.7.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/header-footer.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#search').focus(function () {
-                $(this).attr('placeholder', '');
-            });
-
-            $('#search').blur(function () {
-                $(this).attr('placeholder', '想找什麼玩具呢~');
-            });
-        });
-
+      
         // 數量按鈕
         function increaseQuantity() {
             var quantityElement = document.getElementById("quantity");
@@ -258,36 +332,113 @@
 
         // 直向圖片輪播
 
-        var currentSlideIndex = 0;
-        var slides = document.querySelectorAll(".column img");
-        var mainImage = document.querySelector(".p2");
+        function initCarousel() {
+            let currentSlideIndex = 0;
+            const slides = document.querySelectorAll(".column img");
+            const mainImage = document.querySelector(".p2");
+
+            function showImage(index) {
+                mainImage.src = slides[index].src;
+            }
+
+            function prevSlide() {
+                currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+                showImage(currentSlideIndex);
+            }
+
+            function nextSlide() {
+                currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+                showImage(currentSlideIndex);
+            }
+
+            slides.forEach((slide, index) => {
+                slide.addEventListener("click", () => {
+                    currentSlideIndex = index;
+                    showImage(currentSlideIndex);
+                });
+            });
+
+            return {
+                prevSlide,
+                nextSlide
+            };
+        }
+
+        const carousel = initCarousel();
+
+        // 在大于960px断点时执行
+        if (window.matchMedia("(min-width: 961px)").matches) {
+            const leftButton = document.querySelector(".left4");
+            const rightButton = document.querySelector(".right4");
+
+            leftButton.addEventListener("click", () => {
+                carousel.prevSlide();
+            });
+
+            rightButton.addEventListener("click", () => {
+                carousel.nextSlide();
+            });
+        }
+
+
+        // rwd橫向圖片輪播
+
+        const currentSlideIndex = { value: 0 }; // 使用对象包装 currentSlideIndex，以便在事件监听器中进行修改
+        const slides = document.querySelectorAll(".column img");
+        const mainImage = document.querySelector(".p2");
+        const leftButton = document.querySelector(".left4");
+        const rightButton = document.querySelector(".right4");
 
         function showImage(index) {
             mainImage.src = slides[index].src;
         }
 
         function prevSlide() {
-            currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
-            showImage(currentSlideIndex);
+            currentSlideIndex.value = (currentSlideIndex.value - 1 + slides.length) % slides.length;
+            showImage(currentSlideIndex.value);
         }
 
         function nextSlide() {
-            currentSlideIndex = (currentSlideIndex + 1) % slides.length;
-            showImage(currentSlideIndex);
+            currentSlideIndex.value = (currentSlideIndex.value + 1) % slides.length;
+            showImage(currentSlideIndex.value);
         }
 
-        slides.forEach(function (slide, index) {
-            slide.addEventListener("click", function () {
-                currentSlideIndex = index;
-                showImage(currentSlideIndex);
+        slides.forEach((slide, index) => {
+            slide.addEventListener("click", () => {
+                currentSlideIndex.value = index;
+                showImage(currentSlideIndex.value);
             });
         });
+
+        leftButton.addEventListener("click", () => {
+            prevSlide();
+            showImage(currentSlideIndex.value); // 切换 p2 图片为当前 p1 图片
+        });
+
+        rightButton.addEventListener("click", () => {
+            nextSlide();
+            showImage(currentSlideIndex.value); // 切换 p2 图片为当前 p1 图片
+        });
+
+        // 在960像素断点以下，添加适当的响应
+        if (window.innerWidth <= 960) {
+            leftButton.addEventListener("click", () => {
+                prevSlide();
+                showImage(currentSlideIndex.value); // 切换 p2 图片为当前 p1 图片
+            });
+
+            rightButton.addEventListener("click", () => {
+                nextSlide();
+                showImage(currentSlideIndex.value); // 切换 p2 图片为当前 p1 图片
+            });
+        }
 
         // 加入購物車
 
         function addToCart() {
             alert("商品已加入購物車！");
         }
+
 
         // 底部加購商品區
         var swiper = new Swiper(".mySwiper", {
@@ -298,7 +449,6 @@
                 clickable: true,
             },
         });
-
 
     </script>
 

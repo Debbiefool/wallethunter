@@ -1,0 +1,574 @@
+/* 右上兩條橫線 */
+
+.section1{
+    width: 62.5%;
+    height: 1300px;
+    margin-left:250px;
+    position: relative;
+    /* outline:2px solid blue; */
+    /* margin: 0 auto; */
+    
+}
+
+.title{
+    width: 100%;
+    /* outline:1px solid green; */
+    margin: 150px 0 0 275px;
+    position: relative;
+    
+}
+
+.title .about{
+    font-size: 2rem;
+    color:#3B0579;
+    /* 垂直線的長度 */
+    height: 350px;
+}
+
+.title span{
+    font-size: 1rem;
+    margin-left: 5px;
+    color: #333;
+}
+
+.title .about::before{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #9747FF;
+    /* 水平線 */
+    position: absolute;
+    top: -5px;
+    left: -10px;
+
+}
+
+.up{
+    width: 45%;
+    height: 2px;
+    position: absolute;
+    top: 40px;
+    left: -80px;
+    border: none;
+    background-color: #9747FF;
+
+}
+
+.title .about2{
+    display: none;
+}
+
+
+.content1{
+    width: 70%;
+    /* height: 300px; */
+    background-color: #CFA6FF;
+    margin: 0 auto;
+    position: absolute;
+    top: 70px;
+    left: 300px;
+    border-radius: 50px 0 50px 0;
+    
+}
+
+.content1 .text{
+    width: 100%;
+    display: block;
+    padding: 20px 30px;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: #333;
+    letter-spacing:1.2px ;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+}
+
+/* 下半部 */
+
+.title2{
+    width: 100%;
+    height: 50px; 
+}
+
+.title2 .contact{
+    height: 350px;
+    font-size:2rem ;
+    color:#3B0579;
+    position: absolute;
+    top: 520px;
+    right: 60px;
+}
+
+.title2 span{
+    font-size: 1rem;
+    margin-left: 5px;
+    color: #333;
+}
+
+.title2 .contact2{
+    display:none;
+}
+
+/* 垂直線 */
+.contact::after{
+    content: '';
+    display: block;
+    width: 2px;
+    height: 100%;
+    background-color: #9747FF;
+    position: absolute;
+    top:-10px;
+    right: -20px;
+
+}
+
+
+ /* 水平線 */
+.down{
+    width: 45%;
+    height: 2px;
+    border: none;
+    background-color: #9747FF;
+    position: absolute;
+    top: 550px;
+    right: -20px;
+
+}
+
+
+.content2{
+    width: 63%;
+    background-color: #CFA6FF;
+    height: 600px;
+    position: absolute;
+    bottom: 50px;
+    right:75px;
+    padding: 30px;
+    border-radius: 0 50px 0 50px;
+    
+}
+
+.open-inf{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+.open-inf .text2{
+    font-size: .9rem;
+    color: #333;
+    padding:5px 0;
+}
+
+
+.open-inf .time{
+    /* outline:1px solid red; */
+    width: 30%;
+    text-align: center;
+}
+
+.open-inf i{
+   color: #3B0579;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.content2 .open{
+    padding: 0 15px;
+    width: 30%;
+    /* outline: 1px solid blue; */
+    text-align: center;
+    border-right:1px solid #3B0579;
+    border-left:1px solid #3B0579;
+
+}
+
+
+.open .icon3{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    /* outline: 1px solid yellow; */
+}
+
+
+.open .icon3 img{
+    width: 50%;
+}
+
+
+.open-inf .address{
+    text-align: center;
+    width: 30%;
+}
+
+
+iframe{
+    width: 100%;
+    height: 450px;
+}
+
+
+@media screen and (max-width:1600px) {
+
+    .title{
+        margin: 150px 0 0 230px;
+    }
+
+    .content1{
+       transform: translateX(-50px);
+    }
+
+}
+
+@media screen and (max-width:1440px) {
+
+    .title {
+        margin: 150px 0 0 200px;
+    }
+
+    .content1{
+        transform: translateX(-80px);
+    }
+
+}
+
+@media screen and (max-width:1280px) {
+    .title {
+        margin: 150px 0 0 160px;
+    }
+
+    .content1{
+        transform: translateX(-120px);
+    }
+
+    .content1 .text{
+        font-size: 1rem;
+    }
+
+    .content2{
+        width: 70%;
+        position: absolute;
+        right: 30px;
+    }
+
+
+    .title2 .contact {
+        position: absolute;
+        right: 20px;
+    }
+
+    .down {
+        width: 50%;
+        position: absolute;
+        right: -55px;
+    }
+
+}
+
+@media screen and (max-width:1152px) {
+
+    .title {
+        margin: 150px 0 0 80px;
+    }
+
+    .content1{
+        transform: translateX(-200px);
+        width: 80%;
+    }
+
+    .content1 .text{
+        padding: 15px;
+    }
+
+    .title2 .contact {
+        position: absolute;
+        top: 470px;
+    }
+
+    .down{
+        position: absolute;
+        top: 500px;
+        right:-60px;
+    }
+
+    .content2{
+        width: 80%;
+        position: absolute;
+        bottom: 110px;
+    } 
+   
+}
+
+
+@media screen and (max-width:1024px) {
+    .title {
+        margin: 150px 0 0 50px;
+    }
+
+    .content1{
+        transform: translateX(-230px);
+    }
+
+    .section1{
+        margin-left: 180px;
+    }
+
+
+
+}
+
+@media screen and (max-width:960px) {
+    .section1{
+        margin-left: 160px;
+    }
+
+
+}
+
+@media screen and (max-width:820px) {
+
+    .section1{
+        width: 75%;
+        margin-left: 90px;
+    }
+
+    .content1 .text{
+        font-size: 0.9rem;
+    }
+
+    .map iframe{
+        width: 90%;
+        height: 380px;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+
+    .section1{
+        width: 80%;
+        margin-left: 60px;
+        height: 1000px;
+    }
+
+    .up{
+        width: 55%;
+    }
+
+    .title2 .contact{
+        position: absolute;
+        top: 415px;
+    }
+
+    .down{
+        position: absolute;
+        top:445px;
+        right:-50px;
+        width: 60%;
+    }
+
+    .content2{
+        height: 500px;
+        position: absolute;
+        bottom:-40px;
+    }
+
+    .open-inf{
+        margin-bottom: 10px;
+    }
+
+    .map iframe{
+        /* outline: 1px solid red; */
+        margin-left: 30px;
+    }
+
+
+}
+
+@media screen and (max-width:540px) {
+    .section1{
+        width: 85%;
+        /* margin-left: 10px; */
+        margin: 0 auto;
+        height: 1600px;
+    }
+
+
+    .title .about{
+        display: none;
+    }
+
+    .up{
+        display: none;
+    }
+
+    .title{
+        margin:30px 0;
+    }
+
+    .title .about2{
+        text-align: center;
+        display: block;
+        font-size: 1.8rem;
+        color: #3B0579;
+        margin: 0 auto;
+    }
+
+    .content1{
+        width: 90%;
+        position: absolute;
+        top: 50px;
+        left: 250px;
+        border-radius: 30px 0 30px 0;
+    }
+
+    .content1 .text{
+        padding: 20px;
+    }
+
+    .title2 .contact{
+        display: none;
+    }
+
+    .down{
+        display: none;
+    }
+
+    .title2 .contact2{
+        display: block;
+        font-size: 1.8rem;
+        color: #3B0579;
+        text-align: center;
+    }
+
+    .title2{
+        margin-top: 400px;
+        margin-left: 5px;
+    }
+
+    .content2{
+        width: 95%;
+        border-radius:0;
+        background-color: transparent;
+        position: absolute;
+        top: 455px;
+        right:-12px;
+        /* outline: 1px solid red; */
+
+    }
+
+    .open-inf{
+        display: block;
+        /* margin-left: 20px; */
+    }
+
+    .open-inf i{
+        font-size: 3rem;
+    }
+
+    .open-inf .text2{
+        font-size: 1.5rem;
+    }
+
+    .open-inf .time{
+        /* outline: 1px solid red; */
+        margin: 0 auto;
+        width: 90%;
+        margin-bottom: 30px;
+        /* border-bottom:1px solid #3B0579 */
+    }
+
+    .content2 .open{
+        margin: 0 auto;
+        width: 90%;
+        border: none;
+        margin-bottom: 30px;
+        border-top:1px solid #3B0579;
+        border-bottom:1px solid #3B0579;
+        padding: 20px 0;
+    }
+
+    .open-inf .address{
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .map{
+      /* margin-left: 100px; */
+      width: 90vw;
+      transform: translateX(-50px);
+   } 
+
+    .map iframe{
+        width: 100%;
+        height: 450px;
+    }
+}
+
+
+@media screen and (max-width:430px) {
+    .content1{
+        width: 100%;
+        position: absolute;
+        left: 230px;
+    }
+
+    .content1 .text{
+        font-size: 0.8rem;
+    }
+
+    .title2{
+        margin-top: 370px;
+    }
+
+    .content2{
+        position: absolute;
+        top: 430px;
+        right: -23px;
+    }
+
+}
+
+@media screen and (max-width:414px) {
+    .content1 .text{
+        font-size: 0.7rem;
+    }
+
+    .title2{
+        margin-top: 330px;
+    }
+
+    .content2{
+        position: absolute;
+        top: 385px;
+    }
+
+    .map iframe{
+        height: 400px;
+    }
+
+    .section1{
+        height: 1500px;
+    }
+
+}
+
+@media screen and (max-width:390px) {
+
+    .open-inf .text2{
+        font-size: 1.3rem;
+    }
+
+
+}

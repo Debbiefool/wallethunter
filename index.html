@@ -9,51 +9,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index-style.css">
+    <link rel="stylesheet" href="./css/index-style.css">
+    <link rel="stylesheet" href="./css/header-footer.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 </head>
 
 <body>
+
     <!-- 導覽列 -->
     <header>
+        <button class="hambur">
+            <i class="fa-solid fa-bars" id="shopping-cart"></i>
+        </button>
         <div class="logo">
             <a href="index.html">
                 <img src="./image/logo/LOGO.png" alt="">
             </a>
         </div>
         <ul class="nav">
-            <li class="list"><a href="./index.html">Index</a></li>
-            <li class="list">
-                <a href="./products.html">Products</a>
+            <ol class="first">
+                <li><a href="./register.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+            </ol>
+            <ol class="secondary">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </ol>
+            <li class="list"><a href="./index.html">首 頁 <span>INDEX</span></a></li>
+            <li class="list"><a href="./about.html">關於我們<span>ABOUT</span></a></li>
+            <li class="list third">
+                <a href="./products.html">主要商品<span>PRODUCT</span></a>
+
+                <!--for rwd主要商品 -->
+                <div class="arrow">
+                    <span class="mp">主要商品</span><i class="fa-solid fa-chevron-right"></i>
+                </div>
                 <ol class="nav-list">
-                    <li><a class="sonlist" href="./products.html">Figurine</a></li>
-                    <li><a class="sonlist" href="./products.html">一番くじ</a></li>
-                    <li><a class="sonlist" href="./products.html">Gacha</a></li>
-                    <li><a class="sonlist" href="./products.html">Accessories</a></li>
-                    <li><a class="sonlist" href="./products.html">Blind boxes</a></li>
+                    <li class="back">〈 返回</li>
+                    <li><img src="./image/icon/btn1_0.png" alt=""><a class="sonlist"
+                            href="./products.html">可動人偶<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn2_0.png" alt=""><a class="sonlist"
+                            href="./products.html">一番くじ<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn3_0.png" alt=""><a class="sonlist" href="./products.html">扭
+                            蛋<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn4_0.png" alt=""><a class="sonlist"
+                            href="./products.html">周邊配件<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn5_0.png" alt=""><a class="sonlist" href="./products.html">盲
+                            盒<span>></span></a>
+                    </li>
+
                 </ol>
             </li>
-            <li class="list"></i><a href="./news.html">News</a></li>
-            <li class="list"></i><a href="./products.html">Accessories</a></li>
-            <li class="list"></i><a href="./about.html">About</a></li>
+
+            <li class="list"><a href="./news.html">新聞報報<span>NEWS</span></a></li>
+
+
         </ul>
+
 
         <div class="search">
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
             </div>
             <button>
-                <img src="./image/icon/search.png" alt="">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </button>
         </div>
+
 
         <div class="icon">
             <a href="./register.html"><i class="fa-regular fa-circle-user"></i></a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
         </div>
 
     </header>
+
     <div class="wrapper">
 
         <!-- banner套件 -->
@@ -84,19 +122,19 @@
         <section class="section1">
             <div class="button">
                 <button class="btn" onclick="showContent(0)"><img src="./image/icon/btn1_0.png" alt="">
-                    <p>Figurine</p>
+                    <p>可動人偶</p>
                 </button>
                 <button class="btn" onclick="showContent(1)"><img src="./image/icon/btn2_0.png" alt="">
                     <p>一番くじ</p>
                 </button>
                 <button class="btn" onclick="showContent(2)"><img src="./image/icon/btn3_0.png" alt="">
-                    <p>Gacha</p>
+                    <p>扭 蛋</p>
                 </button>
                 <button class="btn" onclick="showContent(3)"> <img src="./image/icon/btn4_0.png" alt="">
-                    <p>Accessories</p>
+                    <p>周邊配件</p>
                 </button>
                 <button class="btn" onclick="showContent(4)"> <img src="./image/icon/btn5_0.png" alt="">
-                    <p>Blind boxes</p>
+                    <p>盲 盒</p>
                 </button>
             </div>
         </section>
@@ -118,7 +156,7 @@
         </div>
 
         <div class="content">
-            <h1>一番くじ</h1>
+            <h1 class="BANDAI">一番くじ</h1>
             <!-- 淺黃方塊 -->
             <div class="tab-series">
                 <div class="pic">
@@ -183,7 +221,7 @@
             <h1>Hot Video</h1>
         </div>
         <!-- // 避免與banner 套件的css屬性相同，故video的class(多重class)設定為swiper2 -->
-        <div class="swiper swiper2">
+        <div class="swiper swiper2" style="border-radius: 0;">
             <div class="swiper-wrapper" style="margin-top: 50px;">
 
                 <div class="swiper-slide">
@@ -209,12 +247,40 @@
             <div class="swiper-button-next" style="z-index: 999; background-color: #FFA800; padding: 10px;"></div>
             <div class="swiper-button-prev" style="z-index: 999; background-color: rgba(255,168,0,.8); padding: 10px;">
             </div>
+
+           
         </div>
+
+        <div class="swiper swiper3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=i3mzMFy3dBg&t=1s" target="_blank"><img
+                        src="./image/fp/video/v1.png" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=gaGvJeB1gd8" target="_blank"><img
+                        src="./image/fp/video/v2.png" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=aZLL4zY6Kok" target="_blank"><img
+                        src="./image/fp/video/v3.png" alt=""></a>
+                </div>
+                <div class="swiper-slide">
+                    <a href="https://www.youtube.com/watch?v=_TNuABSfTXU" target="_blank"><img
+                        src="./image/fp/video/v4.png" alt=""></a>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+
 
         <!-- top sellings -->
     </section>
     <section class="section4">
-        <h1 class="title2">Top Sellings</h1>
+        <h1 class="title2">Top Selling</h1>
 
 
         <ul class="top-sell">
@@ -222,129 +288,237 @@
             <li class="item">
                 <p class="hot">HOT</p>
                 <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best1.png" alt=""></a>
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best1.png" alt="">
+                    </a>
                 </div>
-                <div class="text">
-                    <h3>POPMART CRYBABY</h3>
-                    <h2>飛天小女警 x 哭娃 聯名系列</h2>
-                    <p>NT$ 330</p>
-                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>CRYBABY</h3>
+                        <h2>飛天小女警系列</h2>
+                        <p>NT$ 330</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+
             </li>
+
             <li class="item">
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best2.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>尋找獨角獸</h3>
+                        <h3>FARMER BOB</h3>
+                        <h2>動物公民系列</h2>
+                        <p>NT$ 477</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best3.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>DIMMO</h3>
+                        <h2>動物王國系列</h2>
+                        <p>NT$ 330</p>
+
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <p class="new">NEW</p>
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best4.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>DIMMO</h3>
+                        <h2>雪人的來信系列</h2>
+                        <p>NT$ 330</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best5.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>若來</h3>
+                        <h3>NANCI</h3>
+                        <h2>夢系列</h2>
+                        <p>NT$ 345</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <p class="hot">HOT</p>
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best7.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>SKULLPANDA</h3>
+                        <h2>庭前墨梅系列</h2>
+                        <p>NT$ 330</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <p class="new">NEW</p>
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best8.png" alt="">
+                    </a>
+                </div>
+
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>尋找獨角獸</h3>
+                        <h3>幽靈熊</h3>
+                        <h2>捉迷藏系列</h2>
+                        <p>NT$ 425</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best3.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>DIMMO</h3>
+                        <h2>動物王國系列</h2>
+                        <p>NT$ 330</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <li class="item">
+                <div class="pic2">
+                    <a href="./products-list.html" class="link-canceled">
+                        <img src="./image/fp/bestselling/best1.png" alt="">
+                    </a>
+                </div>
+                <a href="./products-list.html" class="link-canceled2">
+                    <div class="text">
+                        <h3>泡泡瑪特</h3>
+                        <h3>CRYBABY</h3>
+                        <h2>飛天小女警系列</h2>
+                        <p>NT$ 330</p>
+
+                        <div class="icon2">
+                            <button><i class="heart fa-regular fa-heart" onclick="toggleFavorite(this)"></i></button>
+                            <button><i class="cart fa-solid fa-cart-shopping" onclick="addToCart()"></i></button>
+                        </div>
+                    </div>
+                </a>
+            </li>
+
+            <!-- <li class="item">
+                <p class="hot">HOT</p>
                 <div class="pic2">
                     <a href="./products-list.html"><img src="./image/fp/bestselling/best2.png" alt=""></a>
                 </div>
                 <div class="text">
-                    <h3>FINDING UNICORN BOB</h3>
+                    <h3>尋找獨角獸</h3>
+                    <h3>FARMER BOB</h3>
                     <h2>動物公民系列</h2>
-                    <p>USD 14.90</p>
+                    <p>NT$ 477</p>
                 </div>
             </li>
-            <li class="item">
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best3.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>POPMART DIMMO</h3>
-                    <h2>動物王國系列</h2>
-                    <p>NT$ 330</p>
-                </div>
-            </li>
-            <li class="item">
-                <p class="new">NEW</p>
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best4.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>POPMART DIMMO</h3>
-                    <h2>雪人的來信系列</h2>
-                    <p>NT$ 330</p>
-                </div>
-            </li>
-            <li class="item">
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best5.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>Rolife 若來 NANCI</h3>
-                    <h2>夢系列</h2>
-                    <p>RMB 69</p>
-                </div>
-            </li>
-            <li class="item">
-                <p class="hot">HOT</p>
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best7.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>POPMART SKULLPANDA</h3>
-                    <h2>庭前墨梅系列</h2>
-                    <p>NT$ 330</p>
-                </div>
-            </li>
-            <li class="item">
-                <p class="new">NEW</p>
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best8.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>FINDING UNICORN 幽靈熊</h3>
-                    <h2>捉迷藏系列</h2>
-                    <p>USD 12.90</p>
-                </div>
-            </li>
-            <li class="item">
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best3.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>POPMART DIMMO</h3>
-                    <h2>動物王國系列</h2>
-                    <p>NT$ 330</p>
-                </div>
-            </li>
-            <li class="item">
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best1.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>POPMART CRYBABY</h3>
-                    <h2>飛天小女警 x 哭娃 聯名系列</h2>
-                    <p>NT$ 330</p>
-                </div>
-            </li>
-            <li class="item">
-                <p class="hot">HOT</p>
-                <div class="pic2">
-                    <a href="./products-list.html"><img src="./image/fp/bestselling/best2.png" alt=""></a>
-                </div>
-                <div class="text">
-                    <h3>FINDING UNICORN BOB</h3>
-                    <h2>動物公民系列</h2>
-                    <p>USD 14.90</p>
-                </div>
-            </li>
+
             <li class="item">
                 <div class="pic2">
                     <a href="./products-list.html"><img src="./image/fp/bestselling/best4.png" alt=""></a>
                 </div>
                 <div class="text">
-                    <h3>POPMART DIMMO</h3>
+                    <h3>泡泡瑪特</h3>
+                    <h3>DIMMO</h3>
                     <h2>雪人的來信系列</h2>
                     <p>NT$ 330</p>
                 </div>
             </li>
+            
             <li class="item">
                 <p class="new">NEW</p>
                 <div class="pic2">
                     <a href="./products-list.html"><img src="./image/fp/bestselling/best5.png" alt=""></a>
                 </div>
                 <div class="text">
-                    <h3>Rolife 若來 NANCI</h3>
+                    <h3>若來</h3>
+                    <h3>NANCI</h3>
                     <h2>夢系列</h2>
-                    <p>RMB 69</p>
+                    <p>NT$ 345</p>
                 </div>
-            </li>
+            </li> -->
         </ul>
     </section>
 
@@ -361,7 +535,7 @@
 
                 <ul class="social">
 
-                    <h1 class="follow">Follow us On</h1>
+                    <h1 class="follow">Folllow us On</h1>
                     <li class="social-icon">
                         <a href="./about.html"><img src="./image/icon/line.png" alt=""></a>
                     </li>
@@ -383,6 +557,10 @@
                 </h6>
 
             </div>
+
+            <div class="top-btn">
+                <i class="fa-solid fa-circle-up"></i>
+            </div>
         </div>
 
 
@@ -391,21 +569,10 @@
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="./jquery-3.7.1.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/header-footer.js"></script>
 
     <script>
-
-        $(document).ready(function () {
-            $('#search').focus(function () {
-                $(this).attr('placeholder', '');
-            });
-
-            $('#search').blur(function () {
-                $(this).attr('placeholder', '想找什麼玩具呢~');
-            });
-        });
-
-
 
         // <!-- Initialize Swiper -->
         const progressCircle = document.querySelector(".autoplay-progress svg");
@@ -454,7 +621,6 @@
             });
         }
 
-
         // video
         var swiper = new Swiper('.swiper2', {
             slidesPerView: 3,
@@ -477,7 +643,35 @@
             return direction;
         }
 
+        // 商品的收藏和購物車彈窗
 
+        function toggleFavorite(icon) {
+            icon.classList.toggle('fa-solid');
+            if (icon.classList.contains('fa-solid')) {
+                icon.style.color = 'red'; // 將圖標設置為红色
+                alert('已加入收藏清單！');
+            } else {
+                icon.style.color = 'black'; // 將圖標設置為黑色
+            }
+        }
+
+        function addToCart() {
+            alert("商品已加入購物車！");
+        }
+
+        //rwd swiper
+        var swiper = new Swiper(".swiper3", {
+            spaceBetween: 30,
+            effect: "fade",
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
 
     </script>
 

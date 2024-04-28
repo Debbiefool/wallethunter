@@ -9,49 +9,84 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./register.css">
+    <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="./css/header-footer.css">
 </head>
 
 <body>
     <!-- 導覽列 -->
     <header>
+        <button class="hambur">
+            <i class="fa-solid fa-bars" id="shopping-cart"></i>
+        </button>
         <div class="logo">
             <a href="index.html">
                 <img src="./image/logo/LOGO.png" alt="">
             </a>
         </div>
         <ul class="nav">
-            <li class="list"><a href="./index.html">Index</a></li>
-            <li class="list">
-                <a href="./products.html">Products</a>
+            <ol class="first">
+                <li><a href="./register.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+            </ol>
+            <ol class="secondary">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </ol>
+            <li class="list"><a href="./index.html">首 頁 <span>INDEX</span></a></li>
+            <li class="list"><a href="./about.html">關於我們<span>ABOUT</span></a></li>
+            <li class="list third">
+                <a href="./products.html">主要商品<span>PRODUCT</span></a>
+
+                <!--for rwd主要商品 -->
+                <div class="arrow">
+                    <span class="mp">主要商品</span><i class="fa-solid fa-chevron-right"></i>
+                </div>
                 <ol class="nav-list">
-                    <li><a class="sonlist" href="./products.html">Figurine</a></li>
-                    <li><a class="sonlist" href="./products.html">一番くじ</a></li>
-                    <li><a class="sonlist" href="./products.html">Gacha</a></li>
-                    <li><a class="sonlist" href="./products.html">Accessories</a></li>
-                    <li><a class="sonlist" href="./products.html">Blind boxes</a></li>
+                    <li class="back">〈 返回</li>
+                    <li><img src="./image/icon/btn1_0.png" alt=""><a class="sonlist"
+                            href="./products.html">可動人偶<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn2_0.png" alt=""><a class="sonlist"
+                            href="./products.html">一番くじ<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn3_0.png" alt=""><a class="sonlist" href="./products.html">扭
+                            蛋<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn4_0.png" alt=""><a class="sonlist"
+                            href="./products.html">周邊配件<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn5_0.png" alt=""><a class="sonlist" href="./products.html">盲
+                            盒<span>></span></a>
+                    </li>
+
                 </ol>
             </li>
-            <li class="list"></i><a href="./news.html">News</a></li>
-            <li class="list"></i><a href="./products.html">Accessories</a></li>
-            <li class="list"></i><a href="./about.html">About</a></li>
+
+            <li class="list"><a href="./news.html">新聞報報<span>NEWS</span></a></li>
+
+
         </ul>
+
 
         <div class="search">
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
             </div>
             <button>
-                <img src="./image/icon/search.png" alt="">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </button>
         </div>
+
 
         <div class="icon">
             <a href="./register.html"><i class="fa-regular fa-circle-user"></i></a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
         </div>
 
     </header>
@@ -69,10 +104,11 @@
                     <img class="line" src="./image/icon/google.png" alt="">
                     快 速 註 冊</button>
             </div>
+            <br>
             <hr>
             <h3 class="subtitle">會 員 資 料</h3>
 
-            <form id="loginform" action="#" method="post">
+            <form class="form" id="loginform" action="#" method="post">
 
                 <div class="form-group">
                     <label for="username">* 姓 名：<br></label>
@@ -81,14 +117,15 @@
                 </div>
 
                 <div class="form-group gender">
-                    <label for="gender">* 性 別：
-                        <label><input class="sex" type="radio" name="gender" value="male">
-                            <img src="./image/icon/♂.png" alt="">
-                        </label>
-                        <label><input class="sex" type="radio" name="gender" value="female">
-                            <img src="./image/icon/♀.png" alt="">
-                        </label>
-                    </label>
+                    <p>* 性 別：</p>
+                    <div class="choose">
+                        <input class="sex" type="radio" name="gender" value="male">
+                        <img src="./image/icon/♂.png" alt="">
+
+                        <input class="sex" type="radio" name="gender" value="female">
+                        <img src="./image/icon/♀.png" alt="">
+                    </div>
+
                 </div>
 
                 <div class="form-group">
@@ -112,13 +149,15 @@
                 <div class="form-group">
                     <label for="password">* 密 碼：<br></label>
                     <br>
-                    <input type="text" id="password" name="password" placeholder="密碼須包含英文和數字，英文至少需含一個大寫字母">
+                    <input type="text" id="password" name="password" placeholder="密碼須包含英文和數字，英文至少需含一個大寫字母"
+                        pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{10,15}$" required>
                 </div>
 
                 <div class="form-group">
                     <label for="password">* 確 認 密 碼：<br></label>
                     <br>
-                    <input type="text" id="password" name="password" placeholder="請再次輸入設定的密碼">
+                    <input type="text" id="password" name="password" placeholder="請再次輸入設定的密碼"
+                        pattern="^(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{10,15}$" required>
                 </div>
 
                 <div class="form-group private">
@@ -129,7 +168,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit">REGISTER</button>
+                    <button type="submit" id="submitBtn">註 冊</button>
                 </div>
             </form>
 
@@ -149,7 +188,7 @@
 
                 <ul class="social">
 
-                    <h1 class="follow">Follow us On</h1>
+                    <h1 class="follow">Folllow us On</h1>
                     <li class="social-icon">
                         <a href="#"><img src="./image/icon/line.png" alt="./about.html"></a>
                     </li>
@@ -171,20 +210,16 @@
                 </h6>
 
             </div>
+
+            <div class="top-btn">
+                <i class="fa-solid fa-circle-up"></i>
+            </div>
         </div>
     </footer>
 
-    <script src="./jquery-3.7.1.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/header-footer.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#search').focus(function () {
-                $(this).attr('placeholder', '');
-            });
-
-            $('#search').blur(function () {
-                $(this).attr('placeholder', '想找什麼玩具呢~');
-            });
-        });
 
         // 獲取所有帶有 placeholder 屬性的輸入欄位
         var inputs = document.querySelectorAll('input[placeholder]');
@@ -205,6 +240,57 @@
             });
         });
 
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // 获取提交按钮
+            const submitBtn = document.getElementById('submitBtn');
+
+            // 添加点击事件监听器
+            submitBtn.addEventListener('click', function () {
+                // 验证表单
+                if (validateForm()) {
+                    // 如果表单验证通过，显示成功提示
+                    alert('註冊成功!');
+                } else {
+                    // 如果表单验证未通过，显示错误提示
+                    alert('請填寫正確的表單資訊!');
+                }
+            });
+
+            function validateForm() {
+                // 获取输入框和复选框元素
+                const username = document.getElementById('username');
+                const privateCheckbox = document.getElementById('private');
+
+                // 验证用户名是否为空
+                if (username.value.trim() === '') {
+                    return false;
+                }
+
+                // 验证复选框是否被选中
+                if (!privateCheckbox.checked) {
+                    return false;
+                }
+
+                // 其他表单项的验证逻辑可以根据需要添加
+
+                return true; // 表单验证通过
+            }
+        });
+
+        // 制定密碼的規定
+        const passwordInput = document.getElementById('password');
+
+        passwordInput.addEventListener('input', function () {
+            const password = passwordInput.value;
+            const passwordLength = password.length;
+
+            if (passwordLength < 10 || passwordLength > 15) {
+                passwordInput.setCustomValidity('密碼長度必須在 10 至 15 字之间。');
+            } else {
+                passwordInput.setCustomValidity('');
+            }
+        });
 
     </script>
 

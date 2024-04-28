@@ -1,0 +1,1362 @@
+:root {
+    --swiper-theme-color: #ffa800 !important;
+}
+
+
+.wrapper {
+    width: 72.5% !important;
+    margin: 0 auto;
+    /* outline: 1px solid red; */
+}
+
+/* swiper */
+
+.banner {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 120px;
+    /* outline: 2px solid red; */
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+    border-radius: 50px 0 50px 0;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 左上 右上 右下 左下(順時針) */
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.autoplay-progress {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.autoplay-progress svg {
+    --progress: 0;
+    /* border: 1px solid red; */
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 4px;
+    stroke: var(--swiper-theme-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+
+}
+
+.banner .swiper-button-next,
+.banner .swiper-button-prev {
+    color: #9747FF;
+    border-radius: 50%;
+    background-color: #FFF;
+    width: 2%;
+    height: 30px;
+    box-shadow: 2px 2px 5px black;
+    border: 1px solid #9747FF;
+    font-size: 16px;
+}
+
+.banner .swiper-button-next,
+::after {
+    /* border: 1px solid red; */
+    font-size: 16px !important;
+}
+
+/* 分類按鈕--section1 */
+
+.section1 {
+    width: 100%;
+
+    /* border: 1px solid red; */
+}
+
+.section1 .button {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 55px;
+    /* border: 1px solid blue; */
+}
+
+.button .btn {
+    width: 18.5%;
+    height: 80px;
+    /* outline: 1px solid red; */
+    border: 5px solid #9747FF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+
+}
+
+.btn p {
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.section1 .btn img {
+    width: 60px;
+    height: 53px;
+    display: block;
+    margin-right: 10px;
+}
+
+.button .btn:hover,
+.button .btn.active {
+    background-color: #ffa800;
+    color: #fff;
+    transition: all ease-in-out 0.5s;
+    animation-name: wobble-vertical;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1
+}
+
+@keyframes wobble-vertical {
+    16.65% {
+        transform: translateY(8px);
+    }
+
+    33.3% {
+        transform: translateY(-6px);
+    }
+
+    49.95% {
+        transform: translateY(4px);
+    }
+
+    66.6% {
+        transform: translateY(-2px);
+    }
+
+    83.25% {
+        transform: translateY(1px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+/* 分類跑馬燈---section2*/
+
+
+.section2 .content {
+    display: none;
+    /* 隱藏所有的內容 */
+    position: relative;
+    /* 讓子元素可以相對於這個元素進行定位 */
+
+}
+
+.section2 .content.active {
+    display: block;
+    /* 顯示活動的內容 */
+}
+
+/* 調整內容高度，或者使用 min-height */
+.section2 .content {
+    min-height: 440px;
+    /* 或者根據實際需求調整高度 */
+}
+
+.section2 {
+    width: 100%;
+    height: 765px;
+    background-color: #FFA800;
+    /* margin: 0 auto; */
+    margin-top: 60px;
+    position: relative;
+    margin-top: 150px;
+    /* outline: 2px solid blue; */
+}
+
+.tab-series {
+    /* width: 100%;
+    height: 765px;
+    outline:5px solid rgb(16, 208, 122); */
+    width: 100%;
+    height: 440px;
+    background-color: rgba(255, 221, 85, .6);
+    position: absolute;
+    top: 350px;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.pic {
+    /* outline: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.box {
+    /* display: none; */
+    border-radius: 50px;
+    border: 5px solid #9747FF;
+    margin-right: 20px;
+    width: 350px;
+    height: 264px;
+    overflow: hidden;
+    /* outline: 3px solid yellow; */
+}
+
+.box img {
+    width: 100%;
+    transition: all ease-in-out 0.5s;
+}
+
+.pic .box img:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out 0.5s;
+}
+
+
+.section2 h1 {
+    font-size: 13rem;
+    font-weight: bold;
+    letter-spacing: 15px;
+    color: #fff;
+    text-align: center;
+    transform: translateY(-29px);
+}
+
+.section2 .content .BANDAI {
+    transform: translateY(-20px)
+}
+
+.section2 .more {
+    width: 7.5%;
+    display: block;
+    position: absolute;
+    right: 55px;
+    bottom: 168px;
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 2rem;
+    border: 3px solid #9747FF;
+}
+
+.more a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #9747FF;
+}
+
+.section2 .more:hover {
+    background-color: #9747FF;
+    transition: all ease-in-out .3s;
+}
+
+.section2 .more:hover a {
+    color: #fff;
+}
+
+/* hot video */
+
+.section3 {
+    width: 100%;
+}
+
+.title {
+    width: 30%;
+    display: flex;
+    margin-top: 100px;
+    margin-left: 220px;
+    /* outline:3px solid green; */
+
+}
+
+.title h1 {
+    font-size: 6rem;
+    color: #333;
+}
+
+.fire {
+    width: 15%;
+    margin-right: 10px;
+    background-color: transparent;
+}
+
+.section3.swiper2 {
+    width: 100%;
+    height: 100%;
+
+}
+
+.section3 .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #ffffff00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid rgb(0, 255, 119); */
+
+}
+
+.section3 .swiper-slide img {
+    width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    /* border: 1px solid #9747FF; */
+    /* margin: 0 auto; */
+}
+
+@media (max-width: 760px) {
+    .swiper-button-next {
+        right: 20px;
+        transform: rotate(90deg);
+    }
+
+    .swiper-button-prev {
+        left: 20px;
+        transform: rotate(90deg);
+    }
+}
+
+.section3 .swiper-button-next,
+.section3 .swiper-button-prev {
+    color: #9747FF;
+    border-radius: 50%;
+    background-color: #FFF !important;
+    width: 0.5%;
+    height: 10px;
+    box-shadow: 2px 2px 5px black;
+    border: 1px solid #9747FF;
+    margin-top: 15px;
+    /* font-size: 16px ; */
+}
+
+.section3 .swiper-button-next,
+::after {
+    /* border: 1px solid red; */
+    font-size: 16px !important;
+}
+
+.section3 .swiper3{
+    display: none;
+}
+
+
+/* top selling */
+
+.section4 {
+    width: 72.5%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.title2 {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.top-sell {
+    width: 100%;
+    /* outline: 1px solid red; */
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+}
+
+.top-sell .item {
+    width: 28%;
+    height: 480px;
+    margin: 0 auto;
+    border: 3px solid #9747FF;
+    background-color: #fff;
+    margin: 30px 20px;
+    position: relative;
+    /* border-radius: 12px; */
+    overflow: hidden;
+    /* transition: border 0.3s */
+    transition: all ease-in-out .5s;
+}
+
+
+
+.item .pic2 {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.item .pic2 img {
+    width: 80%;
+    padding: 15px;
+    box-sizing: border-box;
+    transition: all ease-in-out .5s;
+    /* outline:2px solid red; */
+}
+
+.item .link-canceled2{
+    text-decoration: none;
+}
+
+
+
+.item .text {
+    width: 100%;
+    /* height: 100%; */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: aliceblue;
+}
+
+.text h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #747474;
+
+}
+
+.text h2 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.text p {
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.item .hot {
+    background-color: red;
+    color: white;
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.item .new {
+    background-color: rgb(255, 174, 0);
+    color: white;
+    width: 15%;
+    text-align: center;
+    padding: 5px;
+    font-size: 1rem;
+    border-radius: 8px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.icon2{
+    display: none;
+}
+
+.item .pic2 img:hover {
+    transform: scale(1.2);
+    transition: all ease-in-out .5s;
+}
+
+.top-sell .item:hover {
+    /* transition: all ease-in-out .5s; */
+    border-color: #3b057900;
+    box-shadow: 0 0 8px #949494;
+    transition: all ease-in-out .5s;
+
+}
+
+@media screen and (max-width: 1680px) {
+    .title {
+        width: 35%;
+    }
+
+    .banner .swiper-button-next,
+    .banner .swiper-button-prev {
+        width: 3%;
+        height: 33px;
+    }
+
+    .section3 .swiper-button-next,
+    ::after {
+        font-size: 14px !important;
+    }
+
+    .top-sell .item {
+        height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 1600px) {
+
+    .top-sell .item {
+        height: 420px;
+    }
+
+    .section2 .more {
+        width: 9%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 1536px) {
+
+    .title {
+        width: 38%;
+        margin-left: 190px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+
+    .banner .swiper-button-next,
+    .banner .swiper-button-prev {
+        height: 28px;
+    }
+
+    .btn p{
+        font-size: 1.8em;
+    }
+
+    .section2{
+        margin-top: 90px;
+    }
+
+    .section2 h1{
+        font-size: 11rem;
+        transform: translateY(-25px);
+    }
+
+    
+    .pic{
+        width: 95%;
+    }
+
+    .section3 .swiper-button-next, 
+    .section3 .swiper-button-prev{
+        width: 1%;
+        height: 15px;
+
+    }
+
+    .section2 .content .BANDAI{
+        transform: translateY(-15px);
+    }
+
+    .title h1{
+        font-size: 5.5rem;
+
+    }
+
+    .top-sell .item{
+        height: 400px;
+    }
+
+}
+
+@media screen and (max-width: 1400px) {
+    .section1 .btn img{
+        width: 50px;
+        height: 48px;
+    }
+
+    
+    .box{
+        width: 300px;
+        height: 220px;
+    }
+
+    
+    .section2 h1{
+        font-size: 9.5rem;
+        transform: translateY(-20px)
+    }
+
+    
+}
+
+@media screen and (max-width: 1280px) {
+    .btn p{
+        font-size: 1.4rem;
+    }
+
+    .section2{
+        margin-top: 60px;
+    }
+
+
+    .section2 .content .BANDAI{
+        transform: translateY(-12px);
+    }
+
+    .section2{
+        height: 700px;
+    }
+
+    .tab-series{
+        height: 380px;
+        position: absolute;
+        top: 260px;
+    }
+
+    .box{
+        width: 280px;
+        height: 200px;
+    }
+
+    .section2 .more{
+        font-size: 1.7rem;
+    }
+
+    .title h1{
+        font-size: 5rem;
+    }
+
+    .item .pic2 img{
+        width: 90%;
+    }
+
+   
+
+}
+
+@media screen and (max-width: 1272px) {
+    .section1 .btn img{
+        width: 45px;
+        height: 45px;
+    }
+
+    .section3 .swiper-button-next, 
+    .section3 .swiper-button-prev{
+        height: 12px;
+    }
+    
+}
+
+@media screen and (max-width: 1152px) {
+
+    .banner .swiper-button-next, 
+    .banner .swiper-button-prev{
+        height: 24px;
+
+    }
+
+    .banner .swiper-button-next,
+    ::after{
+        /* outline: 1px solid red; */
+        font-size: 12px !important;
+    }
+
+    .button .btn{
+        height: 65px;
+    }
+
+    .btn p{
+        font-size: 1.2rem;
+    }
+
+    .section2 h1{
+        font-size: 8.5rem;
+    }
+
+    .section2{
+        height: 600px;
+    }
+
+    .tab-series{
+        height: 350px;
+        position: absolute;
+        top: 170px;
+    }
+
+    .box{
+        width: 250px;
+        height: 180px;
+    }
+
+    .section2 .more{
+        font-size: 1.5rem;
+        position: absolute;
+        bottom: 135px;
+    }
+
+    .title{
+        margin-left: 100px;
+    }
+
+    .title h1{
+        font-size: 4.5rem;
+    }
+
+    .title2{
+        font-size: 3.5rem;
+    }
+
+    .section4{
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+
+    .wrapper{
+        width: 80% !important;
+    }
+
+    .section1 .btn img{
+        width: 35px;
+        height: 35px;
+    }
+   
+    .section2{
+        height: 500px;
+    }
+
+    .tab-series{
+        height: 250px;
+        position: absolute;
+        top:65px;
+    }
+
+    .box{
+        width: 200px;
+        height: 150px;
+    }
+
+    .section2 .more{
+        font-size: 1.1rem;
+        right: 10px;
+        width: 8%;
+    }
+
+    .title{
+        width: 42%;
+    }
+
+    .top-sell .item{
+        width: 25%;
+        height: 330px;
+    }
+
+
+    .text h3{
+        font-size: 1rem;
+    }
+
+    .text h2{
+        font-size: 1.2rem;
+
+    }
+
+    .text p{
+        font-size: 1.3rem;
+    }
+
+    .item .hot{
+        font-size: 0.8rem;
+    }
+
+    .item .new{
+        font-size: 0.8rem;
+    }
+
+    .section3 .swiper-button-next, 
+    .section3 .swiper-button-prev{
+        height: 8px;
+        width: 0.8%;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 960px) {
+    .banner .swiper-button-next, 
+    .banner .swiper-button-prev{
+        height: 22px;
+    }
+
+    .button .btn:hover{
+    background-color: #ffa800;
+    color: #fff;
+    transition: all ease-in-out 0.5s;
+    }
+    @keyframes wobble-vertical {}
+
+
+    .btn {
+        position: relative;
+    }
+    
+    .button .btn{
+        border: none;
+    }
+    .btn:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) translateY(50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 15px 15px 0 15px; /* 調整三角形的大小 */
+        border-color: #ffa800 transparent transparent transparent; /* 調整三角形的顏色 */
+        transition: all 0.3s ease; /* 添加過渡效果 */
+        opacity: 0; /* 初始時設為透明 */
+    }
+    
+    .btn:hover:before {
+        bottom: -6px; /* 將三角形移動到按鈕上方 */
+        opacity: 1; /* 使三角形可見 */
+    }
+
+
+    .section2{
+        height: 600px;
+        margin-top: 30px;
+    }
+
+    .section2 h1{
+        display: none;
+    }
+
+    .tab-series{
+        position: absolute;
+        top: 170px;
+        background-color: transparent;
+    }
+
+    .pic{
+        width: 100%;
+        margin-left: 20px;
+        flex-wrap: wrap
+    }
+
+    .box{
+        width: 35%;
+        height: 250px;
+        margin-bottom: 20px;
+    }
+
+    .box img {
+        width: 110%;
+    }
+
+
+
+    .section2 .more{
+        font-size: 1.3rem;
+        width: 9%;
+        position: absolute;
+        bottom: 18px;
+        right: 35px;
+    }
+    
+    .title{
+        margin-top: 50px;
+    }
+
+    .title h1{
+        font-size: 3.5rem;
+    }
+
+
+}
+
+@media screen and (max-width: 820px) {
+
+    .wrapper{
+        width: 85% !important; 
+    }
+
+    .banner .swiper-button-next, 
+    .banner .swiper-button-prev{
+        height: 20px;
+    }
+
+    .btn p{
+        font-size:1rem;
+    }
+
+    .box{
+        width: 33%;
+        height: 230px;
+        margin-bottom: 20px;
+    }
+
+    .box img {
+        width: 120%;
+    }
+
+
+
+    .section2 .more{
+       width: 11%;
+    }
+
+    .section3 .swiper2{
+        display: none;
+    }
+
+    .section3 .swiper3{
+        display: block;
+        width: 85%;
+        height: 400px;
+        overflow: hidden!important;
+        
+    }
+
+    .section3 .swiper3 .swiper-button-next, 
+    .section3 .swiper3 .swiper-button-prev{
+        width: 4%;
+        height: 25px;
+        margin-top: -10px;
+    }
+
+    .section3 .swiper3 .swiper-button-next{
+       transform: translateX(5px);
+    }
+
+    .section3 .swiper3 .swiper-button-prev{
+       transform: translateX(-5px);
+
+    }
+
+    .section3 .swiper-pagination{
+        transform: translateY(-20px) !important;
+    }
+        
+
+    .section4{
+        margin-top: 60px;
+        /* width: 70%; */
+    }
+
+    .title{
+        margin-left: 70px;
+        margin-bottom: 20px;
+    }
+
+    .title2{
+        font-size: 3rem;
+        margin-bottom: 10px;
+    }
+
+    .top-sell .item{
+        width: 40%;
+        height: 250px;
+    }
+   
+    .item .pic2 .link-canceled{
+        pointer-events: none;
+
+    }
+
+    .item .text {
+        background-color: rgba(255, 255, 255, .9);
+        position: absolute;
+        bottom: -330px;
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: bottom 0.5s ease-in-out;
+    }
+
+    .text h3, .text h2, .text p{
+        text-align: center;
+    }
+
+    .item:hover .text {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        background-color: #ffffffd4;
+        transition: all ease-in-out .5s;
+    }
+
+    .icon2{
+        display: block;
+    }
+
+    .icon2 {
+        display: flex;
+        /* outline: 1px solid red; */
+        width: 80%;
+        transform: translateX(50px) translateY(40px);
+    }
+    
+    .icon2 button {
+        border: none;
+        background-color: transparent;
+        border: 2px solid #3B0579;
+        border-radius: 50%;
+        width: 20%;
+        height: 30px;
+        font-size: 1.3rem;
+        color: #3B0579;
+        cursor: pointer;
+        margin-right: 50px;
+    
+    }
+    
+    .icon2 button i {
+        color: #3B0579;
+        font-size: 1.1rem;
+        transform: translateX(-5px) translateY(-1px);
+        padding: 5px;
+    }
+
+    .heart.active {
+        color: red;
+    }
+    
+    .icon2 button:hover {
+        background-color: #fff;
+    }
+    
+    .icon2 .heart:hover {
+        color: #ff0000;
+    }
+    
+    .icon2 .cart:hover {
+        color: #9747FF;
+    }
+
+    .top-sell .item:nth-child(9){
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        width: 90% !important;
+    }
+
+    .box{
+        width: 40%;
+        height: 200px;
+        margin-bottom: 40px;
+    }
+
+    .box img{
+        width: 100%;
+    }
+
+    .section2 .more{
+        font-size: 1.2rem;
+    }
+
+    .title h1{
+        font-size: 3rem;
+    }
+
+   
+    .icon2 button i{
+        transform: translateX(-6px) translateY(-1px);
+    }
+
+}
+
+@media screen and (max-width: 540px) {
+    .wrapper{
+        width: 95% !important;
+    }
+
+    .banner{
+        margin-top: 20px;
+    }
+
+    .banner .swiper-button-next, 
+    .banner .swiper-button-prev{
+        display: none;
+    }
+
+    .banner .swiper-pagination{
+        transform: translateY(-10px) !important;
+    }
+
+    .section1 .button{
+        margin-top: 30px;
+    }
+    .section1 .btn img{
+        display: none;
+    }
+
+    .section2{
+        margin-top: 13px;
+    }
+   
+    .box img{
+        width: 130%;
+    }
+
+    .section2 .more{
+        width: 15%;
+    }
+
+    .title{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+
+    .title h1{
+        padding: 10px;
+    }
+    .section3{
+        overflow: hidden;
+    }
+    .section3 .swiper3{
+        width: 90%;
+        height: 300px;
+    }
+
+    .section3 .swiper3 .swiper-button-next, 
+    .section3 .swiper3 .swiper-button-prev{
+        width: 4%;
+        height: 20px;
+    }
+
+    .section3 .swiper-pagination{
+        display: none;
+    }
+
+    .section4{
+        width: 90%;
+    }
+
+    .title2{
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .top-sell .item{
+        width: 45%;
+        margin: 0 auto;
+        height: 220px;
+        margin-bottom: 30px;
+    }
+
+    
+
+    .icon2{
+        transform: translateX(30px) translateY(25px)
+    }
+
+    .icon2 button{
+        width: 23%;
+        height: 35px;
+    }
+
+}
+
+@media screen and (max-width: 430px) {
+    .button .btn{
+        height: 50px;
+    }
+
+    .btn p{
+        font-size: 0.9rem;
+    }
+
+
+    .section2{
+        height: 530px;
+    }
+
+    .tab-series{
+        position: absolute;
+        top: 90px;
+    }
+
+    .box{
+        width: 40%;
+        height: 180px;
+    }
+
+    .box img{
+        transform: scale(1.3);
+    }
+
+    .section2 .more{
+        width: 20%;
+    }
+
+    .title{
+        margin-left: 50px;
+    }
+
+    .section3 .swiper3{
+        height: 250px;
+    }
+
+    .section3 .swiper3 .swiper-button-next, 
+    .section3 .swiper3 .swiper-button-prev{
+        width: 6%;
+        height: 25px;
+    }
+
+    .section4{
+        width: 95%;
+    }
+
+    .top-sell .item{
+        width: 80%;
+        height: 300px;
+    }
+    .item .text{
+        padding: 20px;
+    }
+
+    .text h3{
+        font-size: 1.3rem;
+        margin: 20px auto;
+    }
+
+    .text h2{
+        font-size: 1.5rem;
+    }
+
+    .text h2{
+        font-size: 1.5rem;
+    }
+
+    .icon2{
+        transform: translateX(65px) translateY(40px);
+    }
+        
+    .icon2 button{
+        width: 20%;
+        height: 40px;
+    }
+
+    .icon2 button i{
+        transform: translateX(-1px) translateY(-1px);
+        font-size: 1.1rem;
+    }
+
+    .item .new{
+        font-size: 1rem;
+    }
+
+    .item .hot{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 393px) {
+
+    .btn p{
+        font-size: 0.8rem;
+    }
+
+    .section2{
+        height: 450px;
+    }
+
+    .tab-series{
+        position: absolute;
+        top: 25px;
+    }
+
+    .box{
+        height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .section2 .more{
+        font-size: 1rem;
+        width: 18%;
+        position: absolute;
+        bottom: 8px;
+        right: 12px;
+
+    }
+
+    .box img{
+        transform: scale(1.2);
+    }
+
+    .fire{
+        width: 20%;
+        height: 80px;
+    }
+
+    .title{
+        width: 95%;
+        margin-left: 30px;
+    }
+
+    .title h1{
+      padding: 20px 0 ;
+    }
+
+
+    .section3 .swiper3 .swiper-button-next, 
+    .section3 .swiper3 .swiper-button-prev{
+        height: 20px;
+    }
+
+    .icon2{
+        transform: translateX(55px) translateY(40px);
+    }
+
+
+}

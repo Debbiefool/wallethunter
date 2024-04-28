@@ -9,55 +9,91 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="./css/about.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-
+    <link rel="stylesheet" href="./css/header-footer.css">
 </head>
 
 <body>
     <!-- 導覽列 -->
     <header>
+        <button class="hambur">
+            <i class="fa-solid fa-bars" id="shopping-cart"></i>
+        </button>
         <div class="logo">
             <a href="index.html">
                 <img src="./image/logo/LOGO.png" alt="">
             </a>
         </div>
         <ul class="nav">
-            <li class="list"><a href="./index.html">Index</a></li>
-            <li class="list">
-                <a href="./products.html">Products</a>
+            <ol class="first">
+                <li><a href="./register.html"><i class="fa-regular fa-circle-user"></i></a></li>
+                <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                <li>
+                    <button>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </li>
+            </ol>
+            <ol class="secondary">
+                <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
+            </ol>
+            <li class="list"><a href="./index.html">首 頁 <span>INDEX</span></a></li>
+            <li class="list"><a href="./about.html">關於我們<span>ABOUT</span></a></li>
+            <li class="list third">
+                <a href="./products.html">主要商品<span>PRODUCT</span></a>
+
+                <!--for rwd主要商品 -->
+                <div class="arrow">
+                    <span class="mp">主要商品</span><i class="fa-solid fa-chevron-right"></i>
+                </div>
                 <ol class="nav-list">
-                    <li><a class="sonlist" href="./products.html">Figurine</a></li>
-                    <li><a class="sonlist" href="./products.html">一番くじ</a></li>
-                    <li><a class="sonlist" href="./products.html">Gacha</a></li>
-                    <li><a class="sonlist" href="./products.html">Accessories</a></li>
-                    <li><a class="sonlist" href="./products.html">Blind boxes</a></li>
+                    <li class="back">〈 返回</li>
+                    <li><img src="./image/icon/btn1_0.png" alt=""><a class="sonlist"
+                            href="./products.html">可動人偶<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn2_0.png" alt=""><a class="sonlist"
+                            href="./products.html">一番くじ<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn3_0.png" alt=""><a class="sonlist" href="./products.html">扭
+                            蛋<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn4_0.png" alt=""><a class="sonlist"
+                            href="./products.html">周邊配件<span>></span></a>
+                    </li>
+                    <li><img src="./image/icon/btn5_0.png" alt=""><a class="sonlist" href="./products.html">盲
+                            盒<span>></span></a>
+                    </li>
+
                 </ol>
             </li>
-            <li class="list"></i><a href="./news.html">News</a></li>
-            <li class="list"></i><a href="./products.html">Accessories</a></li>
-            <li class="list"></i><a href="./about.html">About</a></li>
+
+            <li class="list"><a href="./news.html">新聞報報<span>NEWS</span></a></li>
+
+
         </ul>
+
 
         <div class="search">
             <div class="search-bar">
                 <input type="text" name="search" id="search" placeholder="想找什麼玩具呢~">
             </div>
             <button>
-                <img src="./image/icon/search.png" alt="">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
             </button>
         </div>
+
 
         <div class="icon">
             <a href="./register.html"><i class="fa-regular fa-circle-user"></i></a>
             <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
-            <a href="#"><i class="fa-regular fa-heart"></i></a>
         </div>
 
     </header>
     <section class="section1">
         <div class="title">
-            <h1 class="about">About us</h1>
+            <h1 class="about">關於我們<span>About us</span></h1>
+            <h1 class="about2">---關於我們---</h1>
             <hr class="up">
         </div>
         <div class="content1">
@@ -67,27 +103,47 @@
         </div>
 
         <div class="title2">
-            <h1 class="contact">Contact us</h1>
+            <h1 class="contact">聯絡我們<span>Contact us</span></h1>
+            <h1 class="contact2">---聯絡我們---</h1>
             <hr class="down">
         </div>
 
         <div class="content2">
-            <h3 class="text2">營業時間：13:00-22:00</h3>
-            <div class="open">
-                <h3 class="text2">掌握最新消息/客服：</h3>
-                <div class="right2">
-                    <a href="#"><img class="icon" src="./image/icon/ig.png" alt=""></a>
-                    <a href="#"><img class="icon" src="./image/icon/fb.png" alt=""></a>
-                    <a href="#"><img class="icon" src="./image/icon/line2.png" alt=""></a> 
+            <div class="open-inf">
+                <div class="time">
+                    <i class="fa-regular fa-clock"></i>
+                    <h3 class="text2">營業時間</h3>
+                    <h3 class="text2">13:00-22:00</h3>
+                    <h3 class="text2">周一休息</h3>
                 </div>
-                
-            </div>
-            <h3 class="text2">地址：台北市北投區中和街365號</h3>
-            <div class="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.8124501365455!2d121.49619707592859!3d25.142030833931962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae4ec8c80d9f%3A0x5eb3ea027705f799!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5ZKM6KGXMzY16Jmf!5e0!3m2!1szh-TW!2stw!4v1712384581190!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            </div>
 
+                <div class="open">
+                    <i class="fa-solid fa-globe"></i>
+                    <h3 class="text2">掌握最新消息/客服</h3>
+                    <div class="icon3">
+                        <a href="#"><img src="./image/icon/ig.png" alt=""></a>
+                        <a href="#"><img src="./image/icon/fb.png" alt=""></a>
+                        <a href="#"><img src="./image/icon/line2.png" alt=""></a>
+                    </div>
+                </div>
+
+                <div class="address">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <h3 class="text2">地址</h3>
+                    <h3 class="text2">台北市北投區中和街365號</h3>
+                    
+                </div>
+
+            </div>
+            <div class="map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3611.8124501365455!2d121.49619707592859!3d25.142030833931962!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442ae4ec8c80d9f%3A0x5eb3ea027705f799!2zMTEy5Y-w5YyX5biC5YyX5oqV5Y2A5Lit5ZKM6KGXMzY16Jmf!5e0!3m2!1szh-TW!2stw!4v1712384581190!5m2!1szh-TW!2stw"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
         </div>
+       
+
     </section>
 
 
@@ -112,7 +168,7 @@
 
                 <ul class="social">
 
-                    <h1 class="follow">Follow us On</h1>
+                    <h1 class="follow">Folllow us On</h1>
                     <li class="social-icon">
                         <a href="#"><img src="./image/icon/line.png" alt=""></a>
                     </li>
@@ -134,25 +190,20 @@
                 </h6>
 
             </div>
+            <div class="top-btn">
+                <i class="fa-solid fa-circle-up"></i>
+            </div>
         </div>
     </footer>
 
 
 
 
-    <script src="./jquery-3.7.1.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./js/header-footer.js"></script>
     <script>
-        $(document).ready(function () {
-            $('#search').focus(function () {
-                $(this).attr('placeholder', '');
-            });
-
-            $('#search').blur(function () {
-                $(this).attr('placeholder', '想找什麼玩具呢~');
-            });
-        });
-
-
+       
+       
 
     </script>
 
