@@ -18,8 +18,8 @@
 .molly {
     width: 28%;
     position: absolute;
-    top: 200px;
-    left: 200px;
+    top: 130px;
+    left: 250px;
     z-index: 99;
 
     animation: molly 5s linear infinite;
@@ -64,6 +64,10 @@
     width: 100%;
     padding: 0px 20px 100px;
 
+}
+.swiper-pagination {
+    /* border: 1px solid red; */
+    display: none;
 }
 
 .item1 {
@@ -347,7 +351,6 @@
         position: absolute;
         top: 95px;
         left: 205px;
-
     }
 
     .item1 {
@@ -371,6 +374,15 @@
 }
 
 @media screen and (max-width: 1600px) {
+    
+    .topper{
+        width: 72%;
+        position: relative;
+        right: 0 !important;
+        /* border: 1px solid red; */
+        transform: translateX(220px);
+    }
+    
     .buy-btn a {
         width: 35%;
     }
@@ -416,6 +428,13 @@
 
     .topper {
         margin: 220px auto 200px;
+        transform: translateX(100px);
+        width: 85%;
+    }
+    .molly {
+        position: absolute;
+        top: 165px;
+        left: 75px;
     }
 
     .item1 {
@@ -461,17 +480,42 @@
 
 }
 
+@media screen and (max-width: 1366px) {
+    .topper{
+        transform: translateX(150px);
+        width: 78%;
+    }
+    
+    .molly {
+        position: absolute;
+        top: 165px;
+        left: 95px;
+
+    }
+}
+
+@media screen and (max-width :1280px) {
+    .topper{
+        transform: translateX(150px);
+        width: 76%;
+    }
+}
+
 @media screen and (max-width: 1152px) {
 
     .topper {
         margin: 170px auto 170px;
+        transform: translateX(125px);
+        width: 78%;
     }
 
     .molly {
         width: 35%;
         position: absolute;
-        left: 190px;
-
+        left: 40px;
+    }
+    .molly img{
+        width: 92%;
     }
 
     .item1 {
@@ -509,13 +553,17 @@
 @media screen and (max-width: 1024px) {
 
     .topper {
-        width: 80%;
+        width: 79%;
+        transform: translateX(105px);
     }
 
     .molly {
         position: absolute;
         top: 140px;
-        left: 130px;
+        left: 20px;
+    }
+    .molly img {
+        width: 90%;
     }
 
     .section1 {
@@ -531,6 +579,29 @@
 }
 
 @media screen and (max-width: 960px) {
+    .topper {
+        transform: translateX(0px);
+        width: 100% !important; 
+    }
+
+    .item1{
+        transform: translateX(0px);
+    }
+
+    .molly {
+        position: absolute;
+        top: 185px;
+        left: 60px;
+    }
+
+    .molly img {
+        width: 85%;
+    }
+/* 
+    .section1{
+        border: 1px solid red;
+        width: 100%;
+    } */
 
     .all-product .item {
         width: 210px;
@@ -586,6 +657,8 @@
 
 @media screen and (max-width: 768px) {
 
+
+
     .all-product .item {
         width: 40%;
     }
@@ -614,7 +687,15 @@
 
     .molly {
         display: none;
+    }
 
+    .molly {
+        position: absolute;
+        top: 205px;
+        left: 10px;
+    }
+    .molly img {
+        width: 100%;
     }
 
     .topper {
@@ -625,7 +706,9 @@
 
     .item1 {
         width: 150px;
+        transform: translateX(-190px);
     }
+    
 
     .item1 .pic2 {
         width: 100%;
@@ -724,3 +807,4 @@
     }
 
 }
+

@@ -450,6 +450,27 @@
             },
         });
 
+                // 分頁按鈕的JS
+                function showContent(index) {
+            var contents = document.querySelectorAll('.section4 .content');
+            contents.forEach(function (content, i) {
+                if (i === index) {
+                    content.classList.add('active');
+                } else {
+                    content.classList.remove('active');
+                }
+            });
+
+            var buttons = document.querySelectorAll('.button .btn');
+            buttons.forEach(function (button, i) {
+                if (i === index) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+
     </script>
 
 </body>

@@ -952,6 +952,12 @@
 }
 
 @media screen and (max-width: 430px) {
+.left2{
+    /* border: 1px solid blue; */
+    width: 95%;
+    box-sizing: border-box;
+}
+
     .left2 .name{
         font-size: 0.8rem;
     }
@@ -980,7 +986,11 @@
     .buy .button1, .buy .button2{
         width: 40%;
         font-size: 0.8rem;
-    
+    }
+    .information{
+        /* border: 1px solid red; */
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .information .inf{
