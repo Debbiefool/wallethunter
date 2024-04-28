@@ -29,6 +29,10 @@ document.addEventListener("click", function (event) {
     }
 });
 
+
+
+
+
 //子選單滑動出現 
 document.addEventListener('DOMContentLoaded', function () {
     var mainProductButton = document.querySelectorAll('.nav .list')[2]; // 選擇第三個.list元素

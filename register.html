@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./css/register.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/header-footer.css">
+    <link rel="icon" href="./image/logo/PAGE.png" type="image/x-icon">
 </head>
 
 <body>
@@ -260,10 +261,28 @@
             function validateForm() {
                 // 获取输入框和复选框元素
                 const username = document.getElementById('username');
+                const phone = document.getElementById('phone');
+                const account = document.getElementById('account');
+                const password = document.getElementById('password');
                 const privateCheckbox = document.getElementById('private');
 
                 // 验证用户名是否为空
                 if (username.value.trim() === '') {
+                    return false;
+                }
+
+                //驗證手機號碼
+                if (!/^09\d{8}$/.test(phone.value.trim())) {
+                    return false;
+                }
+
+                //驗證電子信箱
+                if (!/^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/.test(account.value.trim())) {
+                    return false;
+                }
+
+                //驗證密碼格式
+                if (!/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,15}$/.test(password.value.trim())) {
                     return false;
                 }
 
@@ -272,6 +291,7 @@
                     return false;
                 }
 
+
                 // 其他表单项的验证逻辑可以根据需要添加
 
                 return true; // 表单验证通过
@@ -279,18 +299,18 @@
         });
 
         // 制定密碼的規定
-        const passwordInput = document.getElementById('password');
+        // const passwordInput = document.getElementById('password');
 
-        passwordInput.addEventListener('input', function () {
-            const password = passwordInput.value;
-            const passwordLength = password.length;
+        // passwordInput.addEventListener('input', function () {
+        //     const password = passwordInput.value;
+        //     const passwordLength = password.length;
 
-            if (passwordLength < 10 || passwordLength > 15) {
-                passwordInput.setCustomValidity('密碼長度必須在 10 至 15 字之间。');
-            } else {
-                passwordInput.setCustomValidity('');
-            }
-        });
+        //     if (passwordLength < 10 || passwordLength > 15) {
+        //         passwordInput.setCustomValidity('密碼長度必須在 10 至 15 字之间。');
+        //     } else {
+        //         passwordInput.setCustomValidity('');
+        //     }
+        // });
 
     </script>
 

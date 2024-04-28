@@ -689,9 +689,12 @@ footer {
         width: 180px;
     }
 
+
+
     .icon a{
         padding: 10px;
         margin-right: 10px;
+        font-size: 1.2rem;
     }
 
     .search{
@@ -727,15 +730,27 @@ footer {
         font-size: 2.1rem;
        
     }
-    
-
    
 }
 
+
+@media screen and (max-width: 768px) {
+
+    .list a{
+        font-size: 0.8rem;
+    }
+
+    .right{
+        margin-right: 40px;
+    }
+
+    .follow{
+        font-size: 1.3rem;
+    }
+
+}
+
 @media screen and (max-width: 540px) {
-
-
-
     .search {
         display: none;
     }
@@ -762,8 +777,6 @@ footer {
         color: #3B0579;
         margin-left: 10px;
     }
-
-
     .nav {
         display: block;
         /* opacity: 0; */
@@ -810,6 +823,7 @@ footer {
 
     .first i {
         font-size: 1.5rem;
+        color: #3B0579;
     }
 
     .nav .list {
@@ -850,15 +864,23 @@ footer {
         display: none;
     }
 
-    .secondary {
+    /* .secondary {
         display: none;
         width: 100%;
         background-color: #3B0579;
         padding: 20px;
         box-sizing: border-box;
-
         overflow: hidden;
-
+    } */
+    .secondary {
+        display: none;
+        width: 100%;
+        background-color: #3B0579;
+        padding: 20px 20px 70px;
+        box-sizing: border-box;
+        overflow: hidden;
+        /* == */
+        
     }
 
     .secondary input {
@@ -868,18 +890,27 @@ footer {
         padding: 0;
     }
 
-
+    /* .secondary.show {
+        display: block;
+        max-height: 0;
+        transition: all .5s ease-in-out;
+    } */
     .secondary.show {
         display: block;
+        opacity: 1;
         max-height: 0;
         transition: all .5s ease-in-out;
     }
 
     .secondary.show.active {
-        max-height: 1000px;
-        transition: all .5s ease-in-out;
-        /* 選擇足夠大的值 */
+        /* max-height: 1000px; */
+        /* transition: all .5s ease-in-out; */
+        /* transform: translateY(0); */
+        opacity: 1;
+        transition: all 0.3s ease-out;
     }
+
+    
 
 
     .list .nav-list{
@@ -1071,6 +1102,7 @@ footer {
 
     .social{
         width: 90%;
+        margin: 20px 0 10px 60px;
     }
 
     .follow{
@@ -1080,6 +1112,7 @@ footer {
 
     .copy{
         width: 85%;
+        margin-left: 65px;
     }
 
 

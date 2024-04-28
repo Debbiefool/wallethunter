@@ -534,6 +534,10 @@
         font-size: 14px !important;
     }
 
+    .pic{
+        margin-left: 25px;
+    }
+
     .top-sell .item {
         height: 450px;
     }
@@ -598,6 +602,14 @@
         transform: translateY(-15px);
     }
 
+    .box img{
+        width: 120%;
+    }
+
+    .title{
+        margin-left: 170px;
+    }
+
     .title h1{
         font-size: 5.5rem;
 
@@ -616,11 +628,6 @@
     }
 
     
-    .box{
-        width: 300px;
-        height: 220px;
-    }
-
     
     .section2 h1{
         font-size: 9.5rem;
@@ -655,12 +662,16 @@
     }
 
     .box{
-        width: 280px;
-        height: 200px;
+        transform: translate(1.5);
+        height: 230px;
     }
 
     .section2 .more{
         font-size: 1.7rem;
+    }
+
+    .title{
+        margin-left: 150px;
     }
 
     .title h1{
@@ -715,24 +726,24 @@
     }
 
     .section2{
-        height: 600px;
+        height: 550px;
     }
 
     .tab-series{
-        height: 350px;
+        height: 300px;
         position: absolute;
-        top: 170px;
+        top: 130px;
     }
 
     .box{
-        width: 250px;
         height: 180px;
     }
 
     .section2 .more{
         font-size: 1.5rem;
         position: absolute;
-        bottom: 135px;
+        bottom: 116px;
+        right: 36px;
     }
 
     .title{
@@ -1048,7 +1059,7 @@
         border: 2px solid #3B0579;
         border-radius: 50%;
         width: 20%;
-        height: 30px;
+        height: 32px;
         font-size: 1.3rem;
         color: #3B0579;
         cursor: pointer;
@@ -1058,8 +1069,8 @@
     
     .icon2 button i {
         color: #3B0579;
-        font-size: 1.1rem;
-        transform: translateX(-5px) translateY(-1px);
+        font-size: 1rem;
+        transform: translateX(-4px) translateY(-1px);
         padding: 5px;
     }
 
@@ -1301,6 +1312,31 @@
     }
 }
 
+@media screen and (max-width: 414px) {
+
+    .section2{
+        height: 480px;
+    }
+
+    .tab-series{
+        position: absolute;
+        top:63px;
+    }
+
+    .box{
+        height: 150px;
+    }
+
+    .section3 .swiper3 .swiper-button-next, 
+    .section3 .swiper3 .swiper-button-prev{
+        height: 20px;
+    }
+
+
+}
+
+
+
 @media screen and (max-width: 393px) {
 
     .btn p{
@@ -1349,14 +1385,38 @@
     }
 
 
-    .section3 .swiper3 .swiper-button-next, 
-    .section3 .swiper3 .swiper-button-prev{
-        height: 20px;
+
+    .icon2{
+        transform: translateX(65px) translateY(40px);
+    }
+
+    .icon2 button i{
+        transform:translateX(-2px) translateY(1px);
+    }
+
+
+}
+
+@media screen and (max-width: 390px) {
+
+    .section2{
+        height: 400px;
+    }
+
+    .tab-series{
+        position: absolute;
+        top:-24px;
+    }
+
+    .box{
+        height: 140px;
+    }
+
+    .section2 .more{
+        font-size: 0.9rem;
     }
 
     .icon2{
-        transform: translateX(55px) translateY(40px);
+        transform: translateX(60px) translateY(30px);
     }
-
-
 }
